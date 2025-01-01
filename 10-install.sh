@@ -9,7 +9,7 @@ fi
 dnf list installed mysql
 if [ $? -ne 0 ] 
 then
-dnf install mysql -y
+    dnf install mysql -y
     if [ $? -ne 0 ]
     then
     echo "Error while installing mysql"
@@ -19,6 +19,7 @@ dnf install mysql -y
     fi
 else
     echo "Already Mysql is installed"
+fi
 
 
 dnf install git -y
