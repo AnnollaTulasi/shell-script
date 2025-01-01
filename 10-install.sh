@@ -22,12 +22,13 @@ else
 fi
 
 
-dnf install git -y
+dnf list installed git 
 
 if [ $? -e 0 ]
 then 
     echo "Already git is installed"
 else
+    dnf install git -y
     if [ $? -ne 0 ] 
     then
         echo "Error while installing git"
