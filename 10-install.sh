@@ -6,15 +6,20 @@ then
     echo "ERROR :: No sudo privelages so you cannot proceed"
 fi
 
-dnf install mysql -y
-
-if [ $? -ne 0 ]
+dnf list installed mysql
+if [ $? -ne 0 ] 
 then
+dnf install mysql -y
+    if [ $? -ne 0 ]
+    then
     echo "Error while installing mysql"
     exit 1
-else
+    else
     echo "Installing Mysql"
-fi
+    fi
+else
+    echo "Already Mysql is installed"
+
 
 dnf install git -y
 
