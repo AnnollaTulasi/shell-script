@@ -24,10 +24,15 @@ fi
 
 dnf install git -y
 
-if [ $? -ne 0 ] 
-then
-    echo "Error while installing git"
-    exit 1
+if [ $? -e 0 ]
+then 
+    echo "Already git is installed"
 else
-    echo "Installing Git"
+    if [ $? -ne 0 ] 
+    then
+        echo "Error while installing git"
+        exit 1
+    else
+        echo "Installing Git"
+    fi
 fi
