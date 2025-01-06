@@ -44,6 +44,13 @@ then
     echo "Files are : $FILES"
     ZIP_FILE="$DEST_DIR/app-logs-$TIMESTAMP.zip"
     find $SOURCE_DIR -name "*.log" -mtime +$DAYS | zip -@ "$ZIP_FILE"
+    if [ -f "$ZIP_FILE" ]
+    then
+        echo -e "Succcessfully created zip files older than $DAYS"
+    else
+        echo "$R ERROR: $N failed to zip the files"
+        exit 1
+    fi
 else
     echo "No files to zip"
 fi
