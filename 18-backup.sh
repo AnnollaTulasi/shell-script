@@ -20,7 +20,7 @@ USAGE(){
     exit 1
 }
 
-if[ $# -ne 2 ]
+if [ $# -ne 2 ]
 then 
     USAGE
 fi
