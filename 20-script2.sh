@@ -1,4 +1,4 @@
 #!/bin/bash
-MSG="SCRIPT1"
+MSG="SCRIPT2"
 
 echo "Hello from : $MSG"
