@@ -15,3 +15,5 @@ do
 done <<< $DISK_USAGE
 
 echo -e "MSG $MSG"
+
+echo "$MSG" | mutt -s "Hign Disk Usage" annollatulasi@dbs.com
