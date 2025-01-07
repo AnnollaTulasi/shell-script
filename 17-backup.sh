@@ -54,7 +54,7 @@ then
             echo "Deleted file: $file"
         done <<< $FILES
     else
-        echo "$R ERROR: $N failed to zip the files"
+        echo -e "$R ERROR: $N failed to zip the files"
         exit 1
     fi
 else
